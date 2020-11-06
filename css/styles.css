@@ -164,6 +164,35 @@ address {
   color: var(--black);
 }
 
+.social-icons-list {
+  display: inline-flex;
+}
+
+.social-icons-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icons-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.social-icons-svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--black);
+}
+
+.social-icons-link:hover .social-icons-svg,
+.social-icons-link:focus .social-icons-svg {
+  fill: var(--accent-cl);
+}
+
 .title {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -189,6 +218,8 @@ address {
 }
 
 .section-label {
+  display: flex;
+  align-items: center;
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 600;
@@ -197,6 +228,15 @@ address {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--black);
+}
+
+.section-label::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  background-color: currentColor;
 }
 
 .flexbox {
