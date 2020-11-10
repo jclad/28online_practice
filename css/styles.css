@@ -118,9 +118,12 @@ address {
 }
 
 .btn {
+  position: relative;
+  top: 0;
   display: inline-block;
   border: 1px solid var(--accent-cl);
   border-radius: 25px;
+
   padding: 12px 20px;
   font-family: inherit;
   font-weight: 600;
@@ -130,6 +133,16 @@ address {
   text-transform: uppercase;
   background-color: transparent;
   color: var(--black);
+  transition-duration: 2s;
+  transition-property: all;
+  /* transition-delay: 2s; */
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn:hover,
+.bth:focus {
+  background-color: var(--accent-cl);
+  color: white;
 }
 
 .menu {
@@ -150,6 +163,7 @@ address {
 
 .social {
   display: inline-flex;
+  align-items: center;
 }
 
 .social-item:not(:last-child) {
@@ -230,7 +244,8 @@ address {
   color: var(--black);
 }
 
-.section-label::before {
+.section-label::before,
+.social::before {
   content: "";
   display: block;
   width: 60px;
@@ -254,9 +269,14 @@ address {
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   padding-top: 32px;
   padding-bottom: 32px;
-  background-color: var(--dark-bg);
+  z-index: 55;
+  /* background-color: var(--dark-bg); */
 }
 
 .header .logo {
@@ -278,9 +298,33 @@ address {
   align-items: center;
   margin-right: auto;
 }
-
+.hero .container {
+  position: relative;
+  background-image: url(../images/hero/img-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
 .hero-content {
   max-width: 470px;
+  padding-top: 270px;
+  padding-bottom: 206px;
+  margin-left: 200px;
+}
+
+.social-sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 115px;
+  background-color: #fff;
+}
+
+.social-sidebar .social {
+  transform: rotate(-90deg) translateX(50%);
 }
 
 .price-list {
@@ -306,6 +350,51 @@ address {
 .price-line {
   flex-grow: 1;
   border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+  width: calc(((100% - 30px * 5) / 6 * 4) + 30px * 3);
+}
+
+.benefits-item {
+  width: calc((100% - 30px * 1) / 2);
+  padding: 20px 24px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+  color: var(--black);
+  background-color: var(--light-gray);
+  /* background-color: #ff6c00; */
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.benefits-item:nth-child(2n) {
+  margin-right: 0;
+  /* margin-top: 30px;
+  margin-bottom: 0;  - вариант 1 */
+  /* position: relative;
+  top: 30px;  - вариант 2 */
+  transform: translateY(30px);
+}
+
+.benefits-counter {
+  font-weight: 700;
+  font-size: 42px;
+  letter-spacing: 0.05em;
+}
+
+.benefits-counter sup {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.375;
+  color: var(--accent-cl);
 }
 
 .grid {
@@ -337,6 +426,90 @@ address {
 
 .gallery-item {
   flex-basis: calc(100% / 4 - 30px);
+}
+
+.contact-us:focus-within .section-title {
+  color: var(--accent-cl);
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form * {
+  margin-top: 44px;
+}
+
+.form-field {
+  width: calc((100% - 30px) / 2);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  border: none;
+  color: white;
+  background: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+}
+
+.form-field:valid {
+  color: green;
+}
+
+.form-field:invalid {
+  color: red;
+}
+
+.btn:disabled {
+  background-color: #efefef;
+  color: gray;
+  border-color: currentColor;
+}
+
+.form-field:focus {
+  outline: none;
+  /* border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent; */
+  border-bottom-color: var(--accent-cl);
+}
+
+.text-field {
+  width: 100%;
+  resize: none;
+}
+
+.form-field::placeholder {
+  color: var(--gray);
+  text-transform: uppercase;
+}
+
+.form-field:not(:placeholder-shown) {
+  border-bottom-color: var(--white);
+}
+
+.custom-checkbox-label {
+  width: 100%;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  /* vertical-align: middle; */
+  width: 20px;
+  height: 20px;
+  background: #f7f7f7;
+
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.checkbox:checked ~ .custom-checkbox {
+  border: 5px solid #ff6c00;
 }
 
 .contacts-item:not(:last-child) {
