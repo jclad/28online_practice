@@ -1,0 +1,29 @@
+.hero .container {
+  position: relative;
+  background-image: url(../images/hero/img-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.hero-content {
+  max-width: 470px;
+  padding-top: 270px;
+  padding-bottom: 206px;
+  margin-left: 200px;
+}
+
+.social-sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 115px;
+  background-color: #fff;
+}
+
+.social-sidebar .social {
+  transform: rotate(-90deg) translateX(50%);
+}

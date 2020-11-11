@@ -1,0 +1,17 @@
+.dark-bg {
+  background-color: $dark-bg;
+  color: $gray;
+}
+
+.dark-bg .page-title,
+.dark-bg .section-title {
+  color: $white;
+}
+
+.dark-bg .section-label {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.dark-bg .btn {
+  color: $white;
+}
