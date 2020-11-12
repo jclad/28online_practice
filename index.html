@@ -22,25 +22,27 @@
           </ul>
         </nav>
         <a href="tel:+380441111111" class="link contact-link">+38 044 111 11 11</a>
-        <button class="btn" type="button">онлайн-запись</button>
+        <button class="btn" type="button" data-modal-open>онлайн-запись</button>
       </div>
     </header>
     <main>
-      <section class="hero dark-bg">
-        <div class="container">
+      <section class="hero ">
+        <div class="container dark-bg">
           <div class="hero-content">
             <p class="section-label">A hair salon for men in Kyiv</p>
             <h1 class="title page-title">BarberShop</h1>
             <p>Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
           </div>
-          <ul class="list social">
-            <li class="social-item">
-              <a href="https://instagram.com/" class="link social-link" target="_blank" rel="noopener noreferer">Instagram</a>
-            </li>
-            <li class="social-item">
-              <a href="https://www.youtube.com/" class="link social-link" target="_blank" rel="noopener noreferer">Youtube</a>
-            </li>
-          </ul>
+          <div class="hero-sidebar">
+            <ul class="list social">
+              <li class="social-item">
+                <a href="https://instagram.com/" class="link social-link" target="_blank" rel="noopener noreferer">Instagram</a>
+              </li>
+              <li class="social-item">
+                <a href="https://www.youtube.com/" class="link social-link" target="_blank" rel="noopener noreferer">Youtube</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="section about" id="about">
@@ -88,22 +90,22 @@
       <section class="section benefits">
         <div class="container flexbox">
           <div class="content-box">
-            <ul class="list">
-              <li>
-                <span>600<sup>+</sup></span
-                ><span>Довольных клиентов в день</span>
+            <ul class="list benefits-list">
+              <li class="benefits-item">
+                <span class="benefits-counter">600<sup>+</sup></span>
+                <p>Довольных клиентов в день</p>
               </li>
-              <li>
-                <span>50<sup>+</sup></span
-                ><span>Наград за отличный сервис </span>
+              <li class="benefits-item">
+                <span class="benefits-counter">50<sup>+</sup></span>
+                <p>Наград за отличный сервис</p>
               </li>
-              <li>
-                <span>20<sup>+</sup></span
-                ><span>Лучших мастеров Киева </span>
+              <li class="benefits-item">
+                <span class="benefits-counter">20<sup>+</sup></span>
+                <p>Лучших мастеров Киева</p>
               </li>
-              <li>
-                <span>100<sup>+</sup></span
-                ><span>Подарков постоянным клиентам</span>
+              <li class="benefits-item">
+                <span class="benefits-counter">100<sup>+</sup></span>
+                <p>Подарков постоянным клиентам</p>
               </li>
             </ul>
           </div>
@@ -276,5 +278,12 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn-close" data-modal-close>X</button>
+        <p class="message">This is modal!</p>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
