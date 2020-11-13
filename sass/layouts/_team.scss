@@ -2,9 +2,22 @@
   background-color: $light-gray;
 }
 
+.team-list {
+  @include for-size(tablet) {
+    justify-content: center;
+  }
+}
+
 .team-item {
-  flex-basis: calc(100% / 3 - 30px);
   text-align: center;
+
+  @include for-size(tablet) {
+    width: calc(100% / 3 * 2);
+  }
+
+  @include for-size(desktop) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .team-position {

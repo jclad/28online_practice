@@ -1,0 +1,23 @@
+.about .content-box:first-child {
+  @include for-size(tablet-only) {
+    display: none;
+  }
+}
+
+.about > .flexbox {
+  @include for-size(tablet) {
+    display: flex;
+  }
+}
+
+.about .content-box {
+  @include for-size(tablet) {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+.about-list-item:not(:last-child) {
+  @include for-size(tablet) {
+    margin-bottom: 20px;
+  }
+}

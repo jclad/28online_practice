@@ -4,10 +4,14 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: $main-text-cl;
+
+  @include for-size(desktop) {
+    font-size: 18px;
+  }
 }
 
 h1,
@@ -43,20 +47,36 @@ address {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
+
+  @include for-size(mobile) {
+    width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1200px;
+  }
 }
 
 .flexbox {
-  display: flex;
-  justify-content: space-between;
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .content-box {
-  width: calc((100% - 30px) / 2);
+  @include for-size(desktop) {
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 .item-title {
@@ -94,10 +114,13 @@ address {
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .grid-item {
