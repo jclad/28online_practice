@@ -2,14 +2,37 @@
   display: inline-flex;
 }
 
+.menu-item {
+  position: relative;
+}
+
 .menu-item:not(:last-child) {
-  margin-right: 40px;
+  // margin-right: 40px;
+  padding-right: 40px;
 }
 
 .menu-link {
+  display: inline-block;
+  padding-bottom: 20px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.333;
   letter-spacing: 0.1em;
   color: $white;
+}
+
+.menu-item:not(:last-child) {
+  border-bottom: 2px dashed red;
+}
+
+.menu-item:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: goldenrod;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
 }

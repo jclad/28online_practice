@@ -1,8 +1,28 @@
 .price {
-  background-image: url(../images/price/price.png);
+  background-image: url(../images/price/mobile/img.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+    background-image: url(../images/price/mobile/img@2x.png);
+  }
+
+  @include for-size(tablet) {
+    background-image: url(../images/price/tablet/img.png);
+
+    @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+      background-image: url(../images/price/tablet/img@2x.png);
+    }
+  }
+
+  @include for-size(desktop) {
+    background-image: url(../images/price/desktop/img.png);
+
+    @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+      background-image: url(../images/price/desktop/img@2x.png);
+    }
+  }
 }
 
 .price-list {

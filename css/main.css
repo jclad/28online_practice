@@ -15,7 +15,12 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.eot");
-  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.woff") format("woff"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.svg#OpenSans") format("svg");
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.woff") format("woff"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.ttf") format("truetype"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-regular.svg#OpenSans") format("svg");
 }
 
 /* open-sans-600 - latin_cyrillic */
@@ -25,7 +30,12 @@
   font-weight: 600;
   src: url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.eot");
   /* IE9 Compat Modes */
-  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.woff") format("woff"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.ttf") format("truetype"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.svg#OpenSans") format("svg");
+  src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.woff2") format("woff2"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.woff") format("woff"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.ttf") format("truetype"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-600.svg#OpenSans") format("svg");
   /* Legacy iOS */
 }
 
@@ -36,7 +46,12 @@
   font-weight: 700;
   src: url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.eot");
   /* IE9 Compat Modes */
-  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.woff") format("woff"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.svg#OpenSans") format("svg");
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.woff") format("woff"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.ttf") format("truetype"),
+    url("../fonts/open-sans/open-sans-v18-latin_cyrillic-700.svg#OpenSans") format("svg");
   /* Legacy iOS */
 }
 
@@ -255,7 +270,8 @@ address {
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   background-color: #ff6c00;
   color: white;
 }
@@ -270,16 +286,38 @@ address {
   display: inline-flex;
 }
 
+.menu-item {
+  position: relative;
+}
+
 .menu-item:not(:last-child) {
-  margin-right: 40px;
+  padding-right: 40px;
 }
 
 .menu-link {
+  display: inline-block;
+  padding-bottom: 20px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.333;
   letter-spacing: 0.1em;
   color: #ffffff;
+}
+
+.menu-item:not(:last-child) {
+  border-bottom: 2px dashed red;
+}
+
+.menu-item:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: goldenrod;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
 }
 
 .social {
@@ -487,10 +525,44 @@ address {
 }
 
 .price {
-  background-image: url(../images/price/price.png);
+  background-image: url(../images/price/mobile/img.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .price {
+    background-image: url(../images/price/mobile/img@2x.png);
+  }
+}
+
+@media (min-width: 768px) {
+  .price {
+    background-image: url(../images/price/tablet/img.png);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url(../images/price/tablet/img@2x.png);
+  }
+}
+
+@media (min-width: 1200px) {
+  .price {
+    background-image: url(../images/price/desktop/img.png);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url(../images/price/desktop/img@2x.png);
+  }
 }
 
 .price-list {
