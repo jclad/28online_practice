@@ -1,0 +1,29 @@
+.menu {
+  display: inline-flex;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.menu-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.333;
+  letter-spacing: 0.1em;
+  color: $white;
+}
+
+.menu-link.current {
+  color: $accent-cl;
+}
+
+.menu-link:hover:after,
+.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $accent-cl;
+  margin-top: 15px;
+}

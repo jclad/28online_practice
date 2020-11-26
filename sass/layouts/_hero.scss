@@ -1,0 +1,32 @@
+.hero .container {
+  position: relative;
+  background-image: url(../images/hero/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left 115px top;
+}
+
+.hero-sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  width: 115px;
+  padding-left: 15px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+}
+
+.hero-sidebar .social {
+  transform: rotate(-90deg) translateX(50%);
+}
+
+.hero-content {
+  max-width: 470px;
+  padding-bottom: 170px;
+  padding-top: 272px;
+  margin-left: 200px;
+}
