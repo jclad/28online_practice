@@ -1,10 +1,42 @@
 .contacts {
-  padding-left: 100px;
-  padding-right: 100px;
-  background-image: url(../images/contacts/bg.png);
+  background-image: url(../images/contacts/mobile/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left bottom;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/contacts/mobile/bg@2x.png);
+  }
+
+  @include for-size(tablet) {
+    background-image: url(../images/contacts/tablet/bg.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/tablet/bg@2x.png);
+    }
+  }
+
+  @include for-size(desktop) {
+    background-image: url(../images/contacts/desktop/bg.png);
+    padding-left: 100px;
+    padding-right: 100px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (-o-min-device-pixel-ratio: 2/1),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/contacts/desktop/bg@2x.png);
+    }
+  }
 }
 
 .contacts-item {
@@ -43,4 +75,26 @@
 
 .worktime {
   margin-top: 70px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contacts .section-title {
+    width: 100%;
+  }
+
+  .address,
+  .worktime {
+    width: calc((100% - 30px) / 2);
+  }
+
+  .worktime {
+    margin-top: 0;
+  }
 }

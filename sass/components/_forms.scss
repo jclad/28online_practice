@@ -1,11 +1,13 @@
 .contact-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .form-field {
-  width: calc((100% - 30px) / 2);
+  width: 100%;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -20,6 +22,10 @@
   letter-spacing: 0.1em;
   color: $white;
   outline: none;
+
+  @include for-size(tablet) {
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 .form-field::placeholder {
