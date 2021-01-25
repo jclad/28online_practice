@@ -3,8 +3,16 @@
 }
 
 .team-item {
-  flex-basis: calc(100% / 3 - 30px);
   text-align: center;
+
+  @include for-size(tablet-only) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include for-size(desktop) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .team-position {

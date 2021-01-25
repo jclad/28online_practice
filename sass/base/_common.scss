@@ -2,6 +2,10 @@ html {
   box-sizing: border-box;
 }
 
+* {
+  // outline: 2px solid red;
+}
+
 body {
   font-family: $main-font;
 
@@ -43,11 +47,39 @@ address {
 }
 
 .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  padding-left: 31px;
+  padding-right: 31px;
+
+  @include for-size(mobile) {
+    width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @include for-size(tablet) {
+    width: 768px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  @include for-size(desktop) {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  // @media screen and (min-width: 480px) {
+  //   width: 480px;
+  // }
+
+  // @media screen and (min-width: 768px) {
+  //   width: 768px;
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   width: 1200px;
+  // }
 }
 
 .title {
@@ -59,17 +91,25 @@ address {
 
 .page-title {
   margin-bottom: 20px;
-  font-size: 72px;
+  font-size: 42px;
   line-height: 1.18;
+
+  @include for-size(mobile) {
+    font-size: 48px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 72px;
+  }
 }
 
 .flexbox {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
 }
 
 .content-box {
-  width: calc((100% - 30px) / 2);
+  // width: calc((100% - 30px) / 2);
 }
 
 .item-title {

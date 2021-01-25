@@ -1,0 +1,29 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 118px 40px 60px;
+  transform: translateX(100%);
+  transition: 0.8s;
+  background: #ffffff;
+  box-shadow: -4px 0px 8px rgba(177, 175, 175, 0.04), -2px 0px 4px rgba(0, 0, 0, 0.08), -1px 0px 3px rgba(0, 0, 0, 0.16);
+  z-index: 55;
+}
+
+.mobile-menu .menu-item:not(:last-child),
+.mobile-menu .contact-link {
+  margin-bottom: 24px;
+}
+
+.mobile-menu .menu {
+  margin-bottom: 64px;
+  font-size: 18px;
+}
+
+.mobile-menu .social {
+  font-size: 14px;
+  margin-top: 64px;
+}

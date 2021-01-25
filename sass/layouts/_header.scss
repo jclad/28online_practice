@@ -15,15 +15,51 @@
 }
 
 .header .contact-link {
-  margin-right: 40px;
+  @include for-size(mobile-only) {
+    display: none;
+  }
+
+  @include for-size(tablet-only) {
+    position: absolute;
+    right: 67px;
+    bottom: -30px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 40px;
+  }
 }
 
 .header .btn {
+  @include for-size(mobile-only) {
+    display: none;
+  }
   color: white;
+}
+
+.header .menu {
+  @include for-size(mobile-only) {
+    display: none;
+  }
 }
 
 .header-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+}
+
+.btn-mobile-menu {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../images/menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include for-size(tablet) {
+    display: none;
+  }
 }
